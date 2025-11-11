@@ -1,0 +1,43 @@
+---
+import Title from "./Title.astro"
+---
+<header class="flex justify-center items-center flex-col h-screen w-screen relative">
+    <video autoplay   loop src="/fra.mp4"></video>
+
+    <nav class="w-[90%] fixed top-10 left-1/2 -translate-x-1/2 flex justify-between items-center z-10">
+         <a href="/"><img src="/france.png" alt="logo del nav"></a>
+        <ul class="flex items-center gap-10 [&>li>a]:text-white  [&>li>a]:no-underline [&>li>a]:font-medium [&>li>a]:text-xl hover:[&>li>a]:text-yellow-400">
+            <li><a href="#">Home</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#footer">Footer</a></li>
+
+        </ul>
+    </nav>
+
+   <main class="  flex flex-col justify-center items-center gap-6">
+       <div class=""><Title/></div> 
+    </main>
+</header>
+ 
+
+<style>
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    img{
+        width: 12rem;
+    }
+   video {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+
+   }
+</style>
